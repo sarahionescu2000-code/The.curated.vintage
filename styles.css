@@ -129,13 +129,13 @@ body {
 
 /* ---- HERO ---- */
 .hero {
-  padding-block: 3.5rem 3rem;
+  padding-block: 3.8rem 3.2rem;
 }
 
 .hero-inner {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
-  gap: 3rem;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 3.5rem;
   align-items: center;
 }
 
@@ -178,8 +178,12 @@ body {
   font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
-  transition: transform 0.16s ease-out, box-shadow 0.16s ease-out, background 0.16s ease-out,
-    border-color 0.16s ease-out, color 0.16s ease-out;
+  transition:
+    transform 0.16s ease-out,
+    box-shadow 0.16s ease-out,
+    background 0.16s ease-out,
+    border-color 0.16s ease-out,
+    color 0.16s ease-out;
 }
 
 .btn.primary {
@@ -218,83 +222,73 @@ body {
   background: rgba(255, 250, 247, 0.8);
 }
 
-/* ---- HERO CARD & IMAGES ---- */
-/* --- HERO CARD – VERSION WITH SIDE-BY-SIDE OVERLAP --- */
+/* ---- HERO IMAGES & CAPTION (DOAR POZA PRINCIPALA) ---- */
 .hero-card {
   position: relative;
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
   max-width: 100%;
-  justify-content: flex-end;
-  align-items: flex-start;
-  margin-left: auto;
-  margin-right: 0;
-  padding-top: 1rem;
+  margin-left: 1.2rem;   /* spațiu față de textul din stânga */
+  padding-right: 1.2rem; /* spațiu față de marginea din dreapta a containerului */
 }
 
-/* imaginea mare */
+/* imaginea principală – mare, în dreapta, cu margini soft */
 .hero-photo-main {
-  width: 340px;        /* lățime mai mare */
-  height: 420px;       /* înălțime mare și editorială */
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  box-shadow: var(--shadow-soft);
-  background: #f7f0ea;
-  position: relative;
-  z-index: 2;
-}
-
-/* imaginea secundară, suprapusă */
-.hero-photo-secondary {
-  width: 240px;
-  height: 300px;
-  border-radius: var(--radius-xl);
+  width: 420px;
+  max-width: 100%;
+  border-radius: 26px;
   overflow: hidden;
   background: #f7f0ea;
   position: relative;
-  left: -60px;        /* suprapunere spre stânga */
-  top: 60px;          /* suprapunere în jos */
-  box-shadow: var(--shadow-soft);
-  z-index: 1;
-  opacity: 0.95;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.85),  /* contur foarte soft, aproape blur */
+    0 22px 45px rgba(0, 0, 0, 0.08);      /* shadow moale pentru edges */
 }
 
-.hero-photo img {
+.hero-photo-main img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-/* bilețelul de jos (hero-note) ajustat */
+/* nu mai folosim poza secundară în hero */
+.hero-photo-secondary {
+  display: none !important;
+}
+
+/* caption sub poză – aici pui textul "Curated Drops..." în HTML */
 .hero-note {
-  position: absolute;
-  right: 260px;        /* îl mutăm lângă poze */
-  bottom: -40px;
-  max-width: 230px;
-  background: var(--card-bg);
-  border-radius: 16px;
-  border: 1px solid var(--border-soft);
-  padding: 0.8rem 1rem;
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.08);
-  font-size: 0.8rem;
+  position: static;
+  margin-top: 1.4rem;
+  max-width: 380px;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  font-size: 0.9rem;
+  line-height: 1.6;
   color: var(--muted);
 }
 
+/* dacă mai există .hero-note .tag în HTML, îl ascundem */
 .hero-note .tag {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  padding: 0.2rem 0.65rem;
-  font-size: 0.68rem;
-  text-transform: uppercase;
+  display: none;
+}
+
+/* un mic stil în caz că vrei titlu separat în hero-note (opțional în HTML) */
+.hero-note-title {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.02rem;
   letter-spacing: 0.16em;
-  background: #f2c8d5;
-  color: #4b2b35;
+  text-transform: uppercase;
   margin-bottom: 0.35rem;
 }
 
+/* ---- SECTIONS ---- */
 .section-alt {
   background: radial-gradient(circle at top right, #f6e5f4, #fbf5f1 45%, #fdf7f2);
 }
@@ -330,7 +324,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-  transition: transform 0.16s ease-out, box-shadow 0.16s ease-out, border-color 0.16s ease-out;
+  transition:
+    transform 0.16s ease-out,
+    box-shadow 0.16s ease-out,
+    border-color 0.16s ease-out;
 }
 
 .product-card:hover {
@@ -401,8 +398,10 @@ body {
   text-underline-offset: 2px;
 }
 
+/* textul cu "All prices are in EUR..." – mai mult spațiu dedesubt */
 .section-note {
   margin-top: 1.2rem;
+  margin-bottom: 3rem; /* SPAȚIU CLAR ÎNAINTE DE URMĂTOAREA SEcȚIUNE */
   font-size: 0.85rem;
   color: var(--muted);
 }
@@ -592,21 +591,21 @@ input[type="email"]:focus {
   max-width: 460px;
 }
 
-/* imagine principală – mai mică, chenar clar */
+/* imagine principală – chenar clar */
 .product-gallery-main {
   border-radius: 18px;
   overflow: hidden;
   border: 1px solid #f0e4de;
   background: #fff;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
   margin-bottom: 0.75rem;
-  height: 360px;             /* înălțime controlată */
+  height: 360px;
 }
 
 .product-gallery-main img {
   width: 100%;
   height: 100%;
-  object-fit: contain;       /* nu mai taie inelul, îl păstrează întreg */
+  object-fit: contain;
   display: block;
 }
 
@@ -624,13 +623,16 @@ input[type="email"]:focus {
   border-radius: 10px;
   border: 1px solid #f0e4de;
   cursor: pointer;
-  transition: transform 0.12s ease-out, border-color 0.12s ease-out, box-shadow 0.12s ease-out;
+  transition:
+    transform 0.12s ease-out,
+    border-color 0.12s ease-out,
+    box-shadow 0.12s ease-out;
 }
 
 .product-gallery-thumbs img:hover {
   transform: translateY(-1px);
   border-color: #c08a7d;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
 }
 
 .product-detail-price {
@@ -653,20 +655,22 @@ input[type="email"]:focus {
 @media (max-width: 900px) {
   .hero-inner {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 
   .hero-card {
-    margin-top: 2rem;
-    max-width: 100%;
+    margin-left: 0;
+    padding-right: 0;
+    align-items: center;
   }
 
-  .hero-photo-secondary {
-    display: none;
+  .hero-photo-main {
+    width: min(360px, 100%);
   }
 
   .hero-note {
-    position: static;
-    margin-top: 0.9rem;
+    max-width: 100%;
+    text-align: left;
   }
 
   .story-grid,
@@ -696,7 +700,7 @@ input[type="email"]:focus {
   }
 
   .hero {
-    padding-block: 2.3rem 2.5rem;
+    padding-block: 2.6rem 2.7rem;
   }
 
   .section {
@@ -720,87 +724,4 @@ input[type="email"]:focus {
     height: 280px;
   }
 }
-/* === OVERRIDE HERO LAYOUT: CLEAN, LARGE, LIGHT OVERLAP === */
 
-.hero .hero-card {
-  position: relative !important;
-  display: flex !important;
-  gap: 1.5rem;
-  max-width: 100%;
-  justify-content: flex-end;
-  align-items: flex-start;
-  margin-left: auto;
-  margin-right: 0;
-  padding: 0.5rem 0 2.5rem; /* mai mult spațiu jos ca să nu fie cramped */
-}
-
-/* imaginea mare, în dreapta */
-.hero .hero-photo-main {
-  position: relative !important;
-  width: 320px !important;
-  height: 380px !important;
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  box-shadow: var(--shadow-soft);
-  background: #f7f0ea;
-  z-index: 2;
-}
-
-/* imaginea secundară, puțin mai mică, ușor deplasată */
-.hero .hero-photo-secondary {
-  position: relative !important;
-  width: 240px !important;
-  height: 300px !important;
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  background: #f7f0ea;
-  box-shadow: var(--shadow-soft);
-  opacity: 0.96;
-  z-index: 1;
-
-  /* ușoară suprapunere în diagonală, dar fără să coboare foarte mult */
-  margin-top: 40px;
-  transform: translateX(-60px); /* intră puțin peste poza mare */
-}
-
-.hero .hero-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* bilețelul – îl scoatem din înghesuială, îl punem dedesubt, aerisit */
-.hero .hero-note {
-  position: static !important;
-  margin-top: 1.2rem;
-  max-width: 260px;
-  background: var(--card-bg);
-  border-radius: 16px;
-  border: 1px solid var(--border-soft);
-  padding: 0.8rem 1rem;
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.08);
-  font-size: 0.8rem;
-  color: var(--muted);
-}
-
-/* mobil: le simplificăm ca să nu fie haos */
-@media (max-width: 768px) {
-  .hero .hero-card {
-    justify-content: center;
-    padding-bottom: 2rem;
-  }
-
-  .hero .hero-photo-main {
-    width: 100% !important;
-    height: 260px !important;
-  }
-
-  .hero .hero-photo-secondary {
-    display: none !important;
-  }
-
-  .hero .hero-note {
-    margin-top: 0.9rem;
-  }
-}
