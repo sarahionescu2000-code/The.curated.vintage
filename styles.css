@@ -235,7 +235,7 @@ body {
 }
 
 .hero-photo-main {
-  height: 230px;
+  height: 420px;
 }
 
 .hero-photo-secondary {
@@ -712,3 +712,4 @@ input[type="email"]:focus {
     height: 280px;
   }
 }
+
