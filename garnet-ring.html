@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vintage Garnet Ring – The Curated Vintage</title>
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=playfair-display:400,600,700|inter:300,400,500,600" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html#top" class="logo">
+        <span class="logo-mark">TCV</span>
+        <span class="logo-text">The Curated Vintage</span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html#shop">Shop</a>
+        <a href="index.html#story">Story</a>
+        <a href="index.html#how-it-works">How it works</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container product-detail">
+      <div class="product-gallery">
+        <div class="product-gallery-main">
+          <img id="main-image" src="images/Garnet ring 1.jpg" alt="Vintage Garnet Ring">
+        </div>
+        <div class="product-gallery-thumbs">
+          <img src="images/Garnet ring 1.jpg" alt="Front view" onclick="changeImage(this)">
+          <img src="images/Garnet ring 2.jpg" alt="Angle view" onclick="changeImage(this)">
+          <img src="images/Garnet ring 3.jpg" alt="Side view" onclick="changeImage(this)">
+          <img src="images/Garnet ring 4.jpg" alt="Close-up" onclick="changeImage(this)">
+          <img src="images/Garnet ring 5.jpg" alt="On hand" onclick="changeImage(this)">
+          <img src="images/Garnet ring 6.jpg" alt="Profile" onclick="changeImage(this)">
+          <img src="images/Garnet ring 7.jpg" alt="Band detail" onclick="changeImage(this)">
+          <img src="images/Garnet ring 8.jpg" alt="Extra angle" onclick="changeImage(this)">
+          <img src="images/Garnet ring 9.jpg" alt="Detail shot" onclick="changeImage(this)">
+          <img src="images/Garnet ring 10.jpg" alt="Stone close-up" onclick="changeImage(this)">
+          <img src="images/Garnet ring 11.jpg" alt="Ring in box" onclick="changeImage(this)">
+          <img src="images/Garnet ring 12.jpg" alt="Flatlay view" onclick="changeImage(this)">
+          <img src="images/Garnet ring 13.jpg" alt="Additional view" onclick="changeImage(this)">
+        </div>
+      </div>
+
+      <div class="product-detail-info">
+        <p class="eyebrow">statement · vintage</p>
+        <h1>Vintage Garnet Ring</h1>
+        <p class="hero-subtitle">
+          Deep red garnet ring with a bold vintage silhouette and detailed metalwork. A romantic, slightly gothic statement piece that still feels wearable.
+        </p>
+
+        <p class="product-detail-price">Price negotiable</p>
+
+        <div class="product-detail-meta">
+          <ul>
+            <li>Authentic vintage ring</li>
+            <li>Garnet center stone</li>
+            <li>Decorative setting with presence</li>
+            <li>Perfect as a statement piece</li>
+          </ul>
+        </div>
+
+        <div class="product-detail-contact">
+          <p>
+            To ask about this ring or make an offer, please email:
+          </p>
+          <p>
+            <a href="mailto:contact@thecuratedvintage.com?subject=Vintage Garnet Ring" class="link">
+              contact@thecuratedvintage.com
+            </a>
+          </p>
+          <p class="form-note">
+            Extra photos or a short video can be sent on request. Payment is completed manually and shipping is tracked worldwide.
+          </p>
+        </div>
+
+        <p>
+          <a href="index.html#shop" class="link">← Back to the shop</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> The Curated Vintage. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function changeImage(thumb) {
+      const mainImage = document.getElementById('main-image');
+      mainImage.src = thumb.src;
+      mainImage.alt = thumb.alt;
+    }
+  </script>
+</body>
+</html>
