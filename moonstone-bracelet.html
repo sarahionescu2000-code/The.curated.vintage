@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vintage Moonstone Bracelet – The Curated Vintage</title>
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=playfair-display:400,600,700|inter:300,400,500,600" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html#top" class="logo">
+        <span class="logo-mark">TCV</span>
+        <span class="logo-text">The Curated Vintage</span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html#shop">Shop</a>
+        <a href="index.html#story">Story</a>
+        <a href="index.html#how-it-works">How it works</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container product-detail">
+      <div class="product-gallery">
+        <div class="product-gallery-main">
+          <img id="main-image" src="images/Moonstone bracelet 1.jpg" alt="Vintage Moonstone Bracelet">
+        </div>
+        <div class="product-gallery-thumbs">
+          <img src="images/Moonstone bracelet 1.jpg" alt="Front view" onclick="changeImage(this)">
+          <img src="images/Moonstone bracelet 2.jpg" alt="Detail view" onclick="changeImage(this)">
+          <img src="images/Moonstone bracelet 3.jpg" alt="On wrist" onclick="changeImage(this)">
+          <img src="images/Moonstone bracelet 4.jpg" alt="Clasp detail" onclick="changeImage(this)">
+          <img src="images/Moonstone bracelet 5.jpg" alt="Close-up" onclick="changeImage(this)">
+        </div>
+      </div>
+
+      <div class="product-detail-info">
+        <p class="eyebrow">soft glow · vintage</p>
+        <h1>Vintage Moonstone Bracelet</h1>
+        <p class="hero-subtitle">
+          A delicate vintage bracelet set with softly glowing moonstones. Gentle, dreamy and easy to style with both casual and dressy outfits.
+        </p>
+
+        <p class="product-detail-price">Price negotiable</p>
+
+        <div class="product-detail-meta">
+          <ul>
+            <li>Authentic vintage piece</li>
+            <li>Moonstone cabochons</li>
+            <li>Soft, feminine aesthetic</li>
+            <li>Comfortable for everyday wear</li>
+          </ul>
+        </div>
+
+        <div class="product-detail-contact">
+          <p>
+            To ask about this bracelet or make an offer, please email:
+          </p>
+          <p>
+            <a href="mailto:contact@thecuratedvintage.com?subject=Vintage Moonstone Bracelet" class="link">
+              contact@thecuratedvintage.com
+            </a>
+          </p>
+          <p class="form-note">
+            Extra photos or a short video can be sent on request. Payment is completed manually and shipping is tracked worldwide.
+          </p>
+        </div>
+
+        <p>
+          <a href="index.html#shop" class="link">← Back to the shop</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> The Curated Vintage. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function changeImage(thumb) {
+      const mainImage = document.getElementById('main-image');
+      mainImage.src = thumb.src;
+      mainImage.alt = thumb.alt;
+    }
+  </script>
+</body>
+</html>
