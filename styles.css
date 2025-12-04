@@ -219,32 +219,44 @@ body {
 }
 
 /* ---- HERO CARD & IMAGES ---- */
+/* --- HERO CARD – VERSION WITH SIDE-BY-SIDE OVERLAP --- */
 .hero-card {
   position: relative;
-  display: grid;
-  gap: 0.9rem;
-  max-width: 420px;
+  display: flex;
+  gap: 1rem;
+  max-width: 100%;
+  justify-content: flex-end;
+  align-items: flex-start;
   margin-left: auto;
+  margin-right: 0;
+  padding-top: 1rem;
 }
 
-.hero-photo {
+/* imaginea mare */
+.hero-photo-main {
+  width: 340px;        /* lățime mai mare */
+  height: 420px;       /* înălțime mare și editorială */
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-soft);
   background: #f7f0ea;
+  position: relative;
+  z-index: 2;
 }
 
-.hero-photo-main {
-  height: 420px;
-}
-
+/* imaginea secundară, suprapusă */
 .hero-photo-secondary {
-  position: absolute;
-  width: 46%;
-  height: 130px;
-  bottom: -20px;
-  right: -16px;
-  opacity: 0.9;
+  width: 240px;
+  height: 300px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: #f7f0ea;
+  position: relative;
+  left: -60px;        /* suprapunere spre stânga */
+  top: 60px;          /* suprapunere în jos */
+  box-shadow: var(--shadow-soft);
+  z-index: 1;
+  opacity: 0.95;
 }
 
 .hero-photo img {
@@ -254,10 +266,11 @@ body {
   display: block;
 }
 
+/* bilețelul de jos (hero-note) ajustat */
 .hero-note {
   position: absolute;
-  left: -18px;
-  bottom: -70px;
+  right: 260px;        /* îl mutăm lângă poze */
+  bottom: -40px;
   max-width: 230px;
   background: var(--card-bg);
   border-radius: 16px;
@@ -280,11 +293,6 @@ body {
   background: #f2c8d5;
   color: #4b2b35;
   margin-bottom: 0.35rem;
-}
-
-/* ---- SECTIONS ---- */
-.section {
-  padding-block: 4.2rem;
 }
 
 .section-alt {
@@ -712,4 +720,5 @@ input[type="email"]:focus {
     height: 280px;
   }
 }
+
 
