@@ -1,70 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Curated Vintage – Fine Jewellery</title>
-    <link rel="stylesheet" href="style.css">
-    </head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Curated Vintage – Jewelry</title>
+  <meta name="description" content="Curated jewelry with a soft vintage feel – The Curated Vintage." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=playfair-display:400,600,700|inter:300,400,500,600" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">
+        <span class="logo-mark">TCV</span>
+        <span class="logo-text">The Curated Vintage</span>
+      </a>
 
-    <header class="main-header">
-        <div class="logo">The Curated Vintage</div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#story">Curated Story</a></li>
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+      <nav class="main-nav">
+        <a href="#shop">Shop</a>
+        <a href="#story">Story</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <section id="home" class="hero-section">
-        <div class="hero-content">
-            <h1>Vintage Jewels with a History.</h1>
-            <p>Discover our exclusive selection of hand-picked vintage jewellery, each piece telling a unique story.</p>
-            <a href="#shop" class="cta-button">Browse the Collection</a>
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">jewelry • curated • soft vintage</p>
+          <h1>Delicate jewelry with a quiet vintage glow.</h1>
+          <p class="hero-subtitle">
+            Small, carefully chosen drops of jewelry for people who want pieces that feel a little more personal.
+          </p>
+          <div class="hero-actions">
+            <a href="#shop" class="btn primary">Enter the shop</a>
+            <a href="#story" class="btn ghost">Read the story</a>
+          </div>
+          <div class="hero-meta">
+            <span>pastel, timeless tones</span>
+            <span>small batches & limited pieces</span>
+            <span>shipping across Romania</span>
+          </div>
         </div>
+
+        <div class="hero-card">
+          <div class="hero-photo hero-photo-main">
+            <!-- You can swap this for a background image or an <img> later -->
+          </div>
+          <div class="hero-photo hero-photo-secondary">
+            <!-- Close-up detail shot placeholder -->
+          </div>
+          <div class="hero-note">
+            <span class="tag">curated drops</span>
+            <p>
+              We don’t chase volume. We prefer soft, intentional collections that you can actually browse without feeling overwhelmed.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="story" class="content-section about-us">
-        <h2>Our Commitment to Provenance</h2>
-        <div class="story-layout">
-            <div class="story-image">
-                <img src="https://via.placeholder.com/450x300?text=Exquisite+Vintage+Piece" alt="Close-up of a vintage jewel.">
-            </div>
-            <div class="story-text">
-                <h3>Hand-Picked. Gently Restored. Ready for You.</h3>
-                <p>We believe true luxury lies in history and care. Every item is individually selected for its rarity and condition, then carefully restored by expert hands. This ensures that the elegance of the past continues seamlessly into your future.</p>
-                <p>Welcome to sustainable luxury and timeless style.</p>
-            </div>
+    <!-- SHOP / ECWID -->
+    <section class="section" id="shop">
+      <div class="container">
+        <div class="section-header">
+          <h2>Shop</h2>
+          <p>Explore rings, earrings, necklaces and bracelets with a subtle vintage mood.</p>
         </div>
+
+        <!-- 🔗 ECWID INTEGRATION WILL GO HERE -->
+        <!--
+          When you’re ready, paste the Ecwid embed code in this section.
+          It will look something like:
+
+          <div id="my-store-XXXXXX"></div>
+          <script data-cfasync="false" type="text/javascript"
+            src="https://app.ecwid.com/script.js?XXXXXX&data_platform=code&data_date=YYYYMMDD">
+          </script>
+          <script type="text/javascript">Ecwid.init();</script>
+
+          For now you can keep the static grid below as a preview.
+        -->
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-image">
+              <span class="badge">new</span>
+            </div>
+            <div class="product-content">
+              <h3>Soft Gold Curve Ring</h3>
+              <p class="product-meta">18k gold plated • adjustable • made for everyday wear</p>
+              <div class="product-footer">
+                <span class="price">190 RON</span>
+                <a href="#contact" class="link">Ask about availability →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image">
+              <span class="badge badge-soft">limited</span>
+            </div>
+            <div class="product-content">
+              <h3>Everyday Pearl Earrings</h3>
+              <p class="product-meta">freshwater pearls • hypoallergenic stainless steel</p>
+              <div class="product-footer">
+                <span class="price">230 RON</span>
+                <a href="#contact" class="link">Ask about availability →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image">
+              <span class="badge">one of a kind</span>
+            </div>
+            <div class="product-content">
+              <h3>Layered Glow Necklace</h3>
+              <p class="product-meta">double chain • gold plated • adjustable length</p>
+              <div class="product-footer">
+                <span class="price">260 RON</span>
+                <a href="#contact" class="link">Ask about availability →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="section-note">
+          This is a preview layout. Once Ecwid is connected, you’ll be able to browse all products, add to cart and check out directly here.
+        </p>
+      </div>
     </section>
 
-    <section id="shop" class="content-section shop-section">
-        <h2>The Curated Selection</h2>
-        <p class="shop-intro">Browse the full catalog below. All inventory, prices, and secure checkout are managed by Ecwid.</p>
-        
-        <div id="my-ecwid-store">
-            <p style="text-align: center; padding: 50px; border: 2px dashed #B2A4A3;">[YOUR ECWID STORE WIDGET CODE GOES HERE]</p>
+    <!-- STORY -->
+    <section class="section section-alt" id="story">
+      <div class="container story-grid">
+        <div>
+          <h2>The story behind The Curated Vintage</h2>
+          <p>
+            The Curated Vintage started from a love for pieces that feel quietly special – soft metals, gentle shine,
+            details you only notice when you’re close.
+          </p>
+          <p>
+            Instead of chasing fast trends, we look for jewelry that still feels right a year from now. Pieces you can
+            wear with a T-shirt, a blazer, or a dress without overthinking it.
+          </p>
+          <p>
+            Each piece is chosen, checked and photographed carefully, so what you see is as close as possible to what
+            arrives at your door.
+          </p>
         </div>
-        </section>
 
-    <footer id="contact" class="main-footer">
-        <div class="footer-content">
-            <div class="contact-info">
-                <h4>Contact & Inquiries</h4>
-                <p>Email: contact@thecuratedvintage.com</p>
-                <p>Based in Europe</p>
-            </div>
-            <div class="social-media">
-                <h4>Follow Our Story</h4>
-                <p> (Aici veți pune link-uri către Instagram, Pinterest etc.) </p>
-            </div>
+        <div class="story-card">
+          <h3>What “curated” means here</h3>
+          <ul class="checklist">
+            <li>we keep the selection small and intentional</li>
+            <li>we care about comfort, not just how it looks in photos</li>
+            <li>we avoid overly loud, overdone designs</li>
+            <li>we prefer soft tones, gentle shapes, and pieces that layer well</li>
+          </ul>
         </div>
-        <p class="copyright">&copy; 2025 The Curated Vintage. All Rights Reserved. E-commerce by Ecwid.</p>
-    </footer>
+      </div>
+    </section>
 
+    <!-- HOW IT WORKS -->
+    <section class="section" id="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <h2>How it works</h2>
+          <p>Clear, simple steps – and soon a full Ecwid-powered checkout.</p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step">
+            <span class="step-number">01</span>
+            <h3>Browse the pieces</h3>
+            <p>Scroll through the shop and see what feels like you. Need help choosing? Just message us.</p>
+          </article>
+
+          <article class="step">
+            <span class="step-number">02</span>
+            <h3>Ask your questions</h3>
+            <p>
+              Sensitive skin, unsure about sizing or layering? Reach out on Instagram or email and we’ll walk you through it.
+            </p>
+          </article>
+
+          <article class="step">
+            <span class="step-number">03</span>
+            <h3>Payment & shipping</h3>
+            <p>
+              Soon you’ll be able to order directly through Ecwid with online payment. Until then, we use bank transfer,
+              cash on delivery or payment links.
+            </p>
+          </article>
+
+          <article class="step">
+            <span class="step-number">04</span>
+            <h3>Care & styling tips</h3>
+            <p>
+              Each order comes with simple care instructions and a few styling ideas so you can actually wear your pieces, not just store them.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section-alt" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <h2>Let’s stay in touch</h2>
+          <p>
+            Have a question before ordering, looking for a gift, or want help building your everyday stack?
+            Send a message – we’re happy to help.
+          </p>
+
+          <form class="newsletter-form">
+            <label for="email">Leave your email to hear about new drops first:</label>
+            <div class="input-row">
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              <button type="submit" class="btn primary">Notify me</button>
+            </div>
+            <p class="form-note">
+              This form is for display only right now – you can connect it later to a newsletter service.
+            </p>
+          </form>
+        </div>
+
+        <div class="contact-card">
+          <h3>Contact & social</h3>
+          <ul class="contact-list">
+            <li><span>Instagram:</span> <a href="#" target="_blank">@thecuratedvintage</a></li>
+            <li><span>Email:</span> <a href="mailto:hello@thecuratedvintage.com">hello@thecuratedvintage.com</a></li>
+            <li><span>Based in:</span> Romania (online only)</li>
+          </ul>
+          <p class="contact-note">
+            We also do tiny, custom-curated selections for gifts or special events. Tell us the budget and the mood, and we’ll suggest a few options.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> The Curated Vintage. All rights reserved.</span>
+      <span class="footer-links">
+        <a href="#top">↑ back to top</a>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
