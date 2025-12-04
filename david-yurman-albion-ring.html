@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>David Yurman Albion Ring – The Curated Vintage</title>
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=playfair-display:400,600,700|inter:300,400,500,600" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html#top" class="logo">
+        <span class="logo-mark">TCV</span>
+        <span class="logo-text">The Curated Vintage</span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html#shop">Shop</a>
+        <a href="index.html#story">Story</a>
+        <a href="index.html#how-it-works">How it works</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container product-detail">
+      <div class="product-gallery">
+        <div class="product-gallery-main">
+          <img id="main-image" src="images/David Yurman Albion ring 1.jpg" alt="David Yurman Albion Ring">
+        </div>
+        <div class="product-gallery-thumbs">
+          <img src="images/David Yurman Albion ring 1.jpg" alt="Front view" onclick="changeImage(this)">
+          <img src="images/David Yurman Albion ring 2.jpg" alt="Angle view" onclick="changeImage(this)">
+          <img src="images/David Yurman Albion ring 3.jpg" alt="Side view" onclick="changeImage(this)">
+          <img src="images/David Yurman Albion ring 4.jpg" alt="Detail" onclick="changeImage(this)">
+          <img src="images/David Yurman Albion ring 5.jpg" alt="On hand" onclick="changeImage(this)">
+          <img src="images/David Yurman Albion ring 6.jpg" alt="Profile" onclick="changeImage(this)">
+          <img src="images/David Yurman Albion ring 7.jpg" alt="Band detail" onclick="changeImage(this)">
+          <img src="images/David Yurman Albion ring 8.jpg" alt="Close-up" onclick="changeImage(this)">
+          <img src="images/David Yurman Albion ring 9.jpg" alt="Extra angle" onclick="changeImage(this)">
+        </div>
+      </div>
+
+      <div class="product-detail-info">
+        <p class="eyebrow">designer · authentic</p>
+        <h1>David Yurman Albion Ring</h1>
+        <p class="hero-subtitle">
+          Authentic David Yurman Albion ring with the signature cable design and a bold center stone. A collectible piece from an iconic designer.
+        </p>
+
+        <p class="product-detail-price">Price negotiable</p>
+
+        <div class="product-detail-meta">
+          <ul>
+            <li>Authentic David Yurman design</li>
+            <li>Albion collection</li>
+            <li>Signature cable band</li>
+            <li>Statement center stone</li>
+          </ul>
+        </div>
+
+        <div class="product-detail-contact">
+          <p>
+            To ask about this ring or make an offer, please email:
+          </p>
+          <p>
+            <a href="mailto:contact@thecuratedvintage.com?subject=David Yurman Albion Ring" class="link">
+              contact@thecuratedvintage.com
+            </a>
+          </p>
+          <p class="form-note">
+            Additional photos or a short video can be sent on request. Payment is completed manually and shipping is tracked worldwide.
+          </p>
+        </div>
+
+        <p>
+          <a href="index.html#shop" class="link">← Back to the shop</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> The Curated Vintage. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function changeImage(thumb) {
+      const mainImage = document.getElementById('main-image');
+      mainImage.src = thumb.src;
+      mainImage.alt = thumb.alt;
+    }
+  </script>
+</body>
+</html>
