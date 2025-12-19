@@ -12,6 +12,28 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Small, scoped tweaks ONLY for Ecwid so it aligns with your site container -->
+  <style>
+    /* Keep Ecwid inside your layout width */
+    .ecwid-wrap {
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    /* Add a little breathing room similar to your section spacing */
+    #my-store-127187501 {
+      margin-top: 1rem;
+    }
+
+    /* Make sure embedded widgets don’t exceed container */
+    #my-store-127187501 iframe,
+    #my-store-127187501 img,
+    #my-store-127187501 .ecwid {
+      max-width: 100%;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -31,11 +53,10 @@
   </header>
 
   <main id="top">
-    <!-- ✅ NEW HERO SECTION (FINAL, PERFECTLY MATCHING YOUR CSS) -->
+    <!-- HERO -->
     <section class="hero">
       <div class="container hero-inner">
 
-        <!-- LEFT SIDE TEXT -->
         <div class="hero-text">
           <span class="eyebrow">jewelry • curated • authentic vintage</span>
 
@@ -57,26 +78,21 @@
           </div>
         </div>
 
-        <!-- RIGHT SIDE IMAGE + TEXT -->
         <div class="hero-card">
-
-          <!-- MAIN IMAGE (ONLY ONE) -->
           <div class="hero-photo-main hero-photo">
             <img src="images/profile-store-1.jpg" alt="The Curated Vintage jewelry selection">
           </div>
 
-          <!-- TEXT BELOW THE IMAGE -->
           <div class="hero-note">
             <span class="hero-note-title">Curated Drops</span>
             We don’t chase volume. We prefer soft, intentional collections that you can
             actually browse without feeling overwhelmed.
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- SHOP -->
+    <!-- SHOP (Ecwid version) -->
     <section class="section" id="shop">
       <div class="container">
         <div class="section-header">
@@ -84,136 +100,27 @@
           <p>Explore authentic vintage pieces — from soft everyday jewelry to bold statement finds.</p>
         </div>
 
-        <div class="product-grid">
-          <!-- 1. David Yurman Albion Ring -->
-          <article class="product-card">
-            <div class="product-image">
-              <img src="images/david-yurman-albion-ring-1.jpg" alt="David Yurman Albion Ring">
-              <span class="badge">designer</span>
-            </div>
-            <div class="product-content">
-              <h3>David Yurman Albion Ring</h3>
-              <p class="product-meta">
-                Authentic David Yurman Albion ring with the signature cable design and a bold center Blue Topaz stone surounded by Diamonds. Collectible and iconic.
-              </p>
-              <div class="product-footer">
-                <span class="price">Price 800 EUR</span>
-                <a href="david-yurman-albion-ring.html" class="link">View details →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- 2. Moonstone bracelet -->
-          <article class="product-card">
-            <div class="product-image">
-              <img src="images/moonstone-bracelet-1.jpg" alt="Vintage Moonstone Bracelet">
-              <span class="badge badge-soft">soft glow</span>
-            </div>
-            <div class="product-content">
-              <h3>Vintage Quartz Bracelet</h3>
-              <p class="product-meta">
-                A delicate bracelet with softly glowing quartz and a gentle vintage feel. Soft, dreamy and easy to wear.
-              </p>
-              <div class="product-footer">
-                <span class="price">Price 30 EUR </span>
-                <a href="moonstone-bracelet.html" class="link">View details →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- 3. Topaz pendant -->
-          <article class="product-card">
-            <div class="product-image">
-              <img src="images/topaz-pendant-1.jpg" alt="Vintage Topaz Pendant">
-              <span class="badge">one of a kind</span>
-            </div>
-            <div class="product-content">
-              <h3>Vintage Topaz Pendant</h3>
-              <p class="product-meta">
-                Vintage pendant featuring a bright topaz stone set in a detailed silver frame. A soft but noticeable statement piece.
-              </p>
-              <div class="product-footer">
-                <span class="price">Price 130 EUR</span>
-                <a href="topaz-pendant.html" class="link">View details →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- 4. Garnet ring -->
-          <article class="product-card">
-            <div class="product-image">
-              <img src="images/garnet-ring-7.jpg" alt="Vintage Garnet Ring">
-              <span class="badge">statement</span>
-            </div>
-            <div class="product-content">
-              <h3>Vintage Garnet Ring set in Silver</h3>
-              <p class="product-meta">
-                Deep red garnet ring with a bold vintage presence and detailed metalwork. Strong, romantic and eye-catching.
-              </p>
-              <div class="product-footer">
-                <span class="price">Price 200 EUR </span>
-                <a href="garnet-ring.html" class="link">View details →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- 5. Flower silver pendant -->
-          <article class="product-card">
-            <div class="product-image">
-              <img src="images/flower-silver-pendant-2.jpg" alt="Flower Silver Pendant">
-              <span class="badge badge-soft">Ethnic-style</span>
-            </div>
-            <div class="product-content">
-              <h3>Ethnic-style Silver Pendant</h3>
-              <p class="product-meta">
-                Versitile silver pendant with a soft, feminine vintage look. Beautiful layered or worn alone.
-              </p>
-              <div class="product-footer">
-                <span class="price">Price 65 EUR </span>
-                <a href="flower-silver-pendant.html" class="link">View details →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- 6. Jade pendant -->
-          <article class="product-card">
-            <div class="product-image">
-              <img src="images/jade-pendant-2.jpg" alt="Vintage Jade Pendant">
-              <span class="badge">bold</span>
-            </div>
-            <div class="product-content">
-              <h3>Vintage Jade Pendant</h3>
-              <p class="product-meta">
-                Massive green Jade pendant with a strong vintage presence and beautiful green tone. Soft, earthy and striking.
-              </p>
-              <div class="product-footer">
-                <span class="price">Price 100 EUR </span>
-                <a href="jade-pendant.html" class="link">View details →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- 7. Sapphire & Diamond ring -->
-          <article class="product-card">
-            <div class="product-image">
-              <img src="images/sapphire-diamond-cluster-ring-1.jpg" alt="18K Sapphire & Diamond Cluster Ring">
-              <span class="badge">fine jewellery</span>
-            </div>
-            <div class="product-content">
-              <h3>18K Sapphire & Diamond Cluster Ring</h3>
-              <p class="product-meta">
-                18K gold Cluster Ring with a 2.21ct natural sapphire and 1.68ct F–G, VVS–VS diamonds. Certified and handcrafted.
-              </p>
-              <div class="product-footer">
-                <span class="price">4,500 EUR</span>
-                <a href="sapphire-diamond-cluster-ring.html" class="link">View details & video info →</a>
-              </div>
-            </div>
-          </article>
+        <!-- ✅ Ecwid store embed (your code) -->
+        <div class="ecwid-wrap">
+          <div id="my-store-127187501"></div>
         </div>
 
+        <!-- Ecwid script moved here so it loads right where the store is -->
+        <script data-cfasync="false" type="text/javascript"
+          src="https://app.ecwid.com/script.js?127187501&data_platform=code&data_date=2025-12-20"
+          charset="utf-8"></script>
+        <script type="text/javascript">
+          xProductBrowser(
+            "categoriesPerRow=3",
+            "views=grid(20,3) list(60) table(60)",
+            "categoryView=grid",
+            "searchView=list",
+            "id=my-store-127187501"
+          );
+        </script>
+
         <p class="section-note">
-          All prices are in EUR. To purchase, open a product or contact us with the piece name. Each item is one-of-a-kind and sold individually.
+          All prices are in EUR. Each item is one-of-a-kind and sold individually.
         </p>
       </div>
     </section>
@@ -276,8 +183,8 @@
             <span class="step-number">03</span>
             <h3>Payment & shipping</h3>
             <p>
-              Payments are completed  automalically via Stripe (credit/debit cards, Apple pay, Google Pay, Revolut Pay are accepted) or you can contact us for a bank transfer. Shipping is tracked worldwide, with insurance for higher-value pieces.
-           </p>
+              Payments are completed automalically via Stripe (credit/debit cards, Apple pay, Google Pay, Revolut Pay are accepted) or you can contact us for a bank transfer. Shipping is tracked worldwide, with insurance for higher-value pieces.
+            </p>
           </article>
 
           <article class="step">
@@ -300,14 +207,13 @@
             Have a question before ordering, looking for a gift, or want help building your everyday stack?
             Send a message – we’re happy to help.
           </p>
-
         </div>
 
         <div class="contact-card">
           <h3>Contact & social</h3>
           <ul class="contact-list">
-            <li><span>Facebook:</span> <a href="https://www.facebook.com/profile.php?id=61584633570855" target="_blank">https://www.facebook.com/profile.php?id=61584633570855</a></li>
-            <li><span>Email: contact@thecuratedvintage.com
+            <li><span>Facebook:</span> <a href="https://www.facebook.com/profile.php?id=61584633570855" target="_blank" rel="noopener">https://www.facebook.com/profile.php?id=61584633570855</a></li>
+            <li><span>Email:</span> <a href="mailto:contact@thecuratedvintage.com">contact@thecuratedvintage.com</a></li>
             <li><span>Based in:</span> Romania (online only)</li>
           </ul>
           <p class="contact-note">
@@ -332,8 +238,6 @@
   </script>
 </body>
 </html>
-
-
 
 
 
