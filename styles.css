@@ -724,4 +724,106 @@ input[type="email"]:focus {
     height: 280px;
   }
 }
+/* ---- ECWID (Shop embed) – scoped to #my-store-127187501 only ---- */
+#my-store-127187501 {
+  /* păstrează alinierea cu restul secțiunii */
+  width: 100%;
+}
+
+/* forțează fonturile tale pe zona de magazin */
+#my-store-127187501,
+#my-store-127187501 * {
+  font-family: var(--font-body) !important;
+}
+
+/* titluri din Ecwid să pară ca headingurile tale */
+#my-store-127187501 h1,
+#my-store-127187501 h2,
+#my-store-127187501 h3,
+#my-store-127187501 .grid-product__title,
+#my-store-127187501 .product-details__product-title {
+  font-family: var(--font-heading) !important;
+  color: var(--text) !important;
+}
+
+/* wrapper vizual similar cu cardurile tale */
+#my-store-127187501 .ecwid,
+#my-store-127187501 .ecwid-productBrowser,
+#my-store-127187501 .ec-store {
+  border-radius: var(--radius-lg);
+}
+
+/* butoane (Add to bag / Buy now etc.) să arate ca butoanele tale */
+#my-store-127187501 .form-control--primary,
+#my-store-127187501 .form-control__button,
+#my-store-127187501 button,
+#my-store-127187501 .btn,
+#my-store-127187501 a.btn {
+  border-radius: 999px !important;
+}
+
+/* butonul principal – look apropiat de .btn.primary */
+#my-store-127187501 .form-control--primary,
+#my-store-127187501 .form-control__button--primary,
+#my-store-127187501 .ecwid-btn--primary {
+  background: var(--text) !important;
+  color: #fdf7f2 !important;
+  border: 1px solid var(--text) !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+
+/* hover moale */
+#my-store-127187501 .form-control--primary:hover,
+#my-store-127187501 .form-control__button--primary:hover,
+#my-store-127187501 .ecwid-btn--primary:hover {
+  transform: translateY(-1px);
+}
+
+/* linkuri din shop să semene cu ale tale */
+#my-store-127187501 a {
+  color: inherit !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* cardurile de produs – margini + border soft ca la tine */
+#my-store-127187501 .grid-product__wrap,
+#my-store-127187501 .grid-product__wrap-inner,
+#my-store-127187501 .product-details {
+  border-radius: var(--radius-lg) !important;
+}
+
+/* border / background soft, fără să fie agresiv */
+#my-store-127187501 .grid-product__wrap {
+  background: rgba(255, 250, 247, 0.85) !important;
+  border: 1px solid rgba(236, 216, 207, 0.95) !important;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* prețurile – un pic mai “premium” */
+#my-store-127187501 .grid-product__price,
+#my-store-127187501 .product-details__product-price {
+  font-weight: 600 !important;
+  color: var(--text) !important;
+}
+
+/* text secundar (descrieri/labels) */
+#my-store-127187501 .grid-product__subtitle,
+#my-store-127187501 .product-details__product-description,
+#my-store-127187501 .ecwid-productBrowser * {
+  color: var(--muted);
+}
+
+/* spațiere între rânduri în grid, ca să respire */
+#my-store-127187501 .grid__products {
+  gap: 1.4rem !important;
+}
+
+/* responsive: pe mobil să nu forțeze 3 coloane înguste */
+@media (max-width: 720px) {
+  #my-store-127187501 .grid__products {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 
